@@ -1,13 +1,235 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-image-desktop: url("images/pattern-background-desktop.svg");
+  --background-image-mobile: url("images/pattern-background-mobile.svg");
+  --cursor: pointer;
+  --pale-blue: #e0e8ff;
+  --bright-blue: #3829e0;
+  --very-pale-blue: #f5f7ff;
+  --desaturated-blue: #7280a7;
+  --dark-blue: #1f2f56;
+  --font-family: "Red Hat Display", sans-serif;
+  --card-container-width: 22em;
+  --card-title-FS: 1.5em;
+  --card-description-FS: 0.85em;
+  --card-description-padding: 0 1em;
+  --card-description-line-height: 1.5em;
+  --card-content-padding: 2em;
+  --btn-padding: 0.8em 0;
+  --btn-border-radius: 0.5em;
+  --box-shadow: 0 0.8em 1em rgba(56, 41, 224, 0.2);
+  --btn-hover-color: rgba(56, 41, 224, 0.7);
+  --plan-icon-width: 2.5em;
+  --plan-icon-height: 2.5em;
+  --plan-title-FS: 0.85em;
+  --plan-price-FS: 0.85em;
+  --btn-payment-margin-top: 2em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+}
+
+.container {
+  align-items: center;
+  background-color: #e0e8ff;
+  background-color: var(--pale-blue);
+  background-image: var(--background-image-desktop);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  background-color: #f5f7ff;
+  background-color: var(--very-pale-blue);
+  border-radius: 1em;
+  box-shadow: 0 0.8em 1em rgba(56, 41, 224, 0.2);
+  box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: var(--card-container-width);
+}
+
+.card-image {
+  border-radius: 1em 1em 0 0;
+}
+
+.card-content {
+  border-radius: 0 0 1em 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: space-around;
+  padding: var(--card-content-padding);
+}
+
+.card-title {
+  color: var(--dark-blue);
+  font-size: var(--card-title-FS);
+  font-weight: 900;
+}
+
+.card-description,
+.card-title {
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.card-description {
+  color: var(--desaturated-blue);
+  font-size: var(--card-description-FS);
+  line-height: var(--card-description-line-height);
+  margin-top: 1em;
+  padding: var(--card-description-padding);
+}
+
+.card-plan {
+  background-color: rgba(114, 128, 167, 0.04);
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: 2em 1.3fr 1fr;
+  grid-template-rows: repeat(2, 1.3em);
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.plan-icon {
+  height: var(--plan-icon-height);
+  width: var(--plan-icon-width);
+}
+
+.plan-title {
+  color: var(--dark-blue);
+  font-size: var(--plan-title-FS);
+  font-weight: 900;
+  place-self: center;
+}
+
+.plan-price,
+.plan-title {
+  font-family: var(--font-family);
+}
+
+.plan-price {
+  color: var(--desaturated-blue);
+  font-size: var(--plan-price-FS);
+  font-weight: 500;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  place-self: center;
+}
+
+.btn-link {
+  background-color: initial;
+  border: none;
+  color: var(--bright-blue);
+  cursor: var(--cursor);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-top: 1.5em;
+  place-self: center right;
+  text-decoration: underline;
+}
+
+.btn-link:hover {
+  color: var(--btn-hover-color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn-payment {
+  background-color: var(--bright-blue);
+  border: none;
+  border-radius: var(--btn-border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--very-pale-blue);
+  cursor: var(--cursor);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-top: var(--btn-payment-margin-top);
+  padding: var(--btn-padding);
+}
+
+.btn-payment:hover {
+  background-color: rgba(56, 41, 224, 0.7);
+  transition: 0.5s;
+}
+
+.btn-cancel {
+  background-color: var(--very-pale-blue);
+  border: none;
+  border-radius: var(--btn-border-radius);
+  color: var(--desaturated-blue);
+  cursor: var(--cursor);
+  font-family: var(--font-family);
+  font-weight: 700;
+  margin-top: 1.5em;
+}
+
+.btn-cancel:hover {
+  color: var(--dark-blue);
+  transition: 0.5s;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+.attribution {
+  color: var(--dark-blue);
+  font-family: var(--font-family);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.attribution a {
+  color: var(--bright-blue);
+  font-weight: 600;
+}
+
+.attribution a:hover {
+  color: var(--btn-hover-color);
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 23.4375em) {
+  :root {
+    --card-content-padding: 1.5em;
+  }
+  .container {
+    background-image: var(--background-image-mobile);
+  }
+  .card-container {
+    width: 19em;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  :root {
+    --card-title-FS: 1em;
+    --card-description-FS: 0.7em;
+    --plan-icon-width: 2.2em;
+    --plan-icon-height: 2.2em;
+    --plan-title-FS: 0.65em;
+    --plan-price-FS: 0.7em;
+    --card-content-padding: 1em;
+    --btn-payment-margin-top: 1em;
+  }
+  .plan-icon {
+    margin-top: 0.3em;
+  }
+  .btn-link {
+    font-size: 0.7em;
+  }
+  .card-container {
+    width: 15em;
+  }
+  .attribution {
+    font-size: 0.7em;
+  }
 }
