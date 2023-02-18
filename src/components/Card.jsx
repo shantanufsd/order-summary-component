@@ -1,9 +1,9 @@
 import React from "react";
 
 function Card(props) {
-    return <article className="card-container">
+    return <section className="card-container" aria-label="Order Summary">
     <img className="card-image" src={props.image} alt={props.alt} />
-    <section className="card-content">
+    <article className="card-content">
     <h2 className="card-title">{props.title}</h2>
     <p className="card-description">{props.description}</p>
     <div className="card-plan">
@@ -14,8 +14,8 @@ function Card(props) {
     </div>
     <button className="btn-payment">Proceed to Payment</button>
     <button className="btn-cancel">Cancel Order</button>
-    </section>
     </article>
+    </section>
     
 }
 
