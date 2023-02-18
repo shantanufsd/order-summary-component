@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Order Summary Component](https://github.com/shantanufsd/frontend-mentor-challenges/tree/main/order-summary-component)
-- Live Site URL: [View](https://shantanufsd.github.io/frontend-mentor-challenges/order-summary-component)
+- Solution URL: [Order Summary Component](https://github.com/shantanufsd/order-summary-component/tree/main)
+- Live Site URL: [View](https://shantanufsd.github.io/order-summary-component)
 
 ## My process
 

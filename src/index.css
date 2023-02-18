@@ -31,7 +31,6 @@
 
 .container {
   align-items: center;
-  background-color: #e0e8ff;
   background-color: var(--pale-blue);
   background-image: var(--background-image-desktop);
   background-repeat: no-repeat;
@@ -41,7 +40,6 @@
 }
 
 .card-container {
-  background-color: #f5f7ff;
   background-color: var(--very-pale-blue);
   border-radius: 1em;
   box-shadow: 0 0.8em 1em rgba(56, 41, 224, 0.2);
