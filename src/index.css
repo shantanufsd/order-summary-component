@@ -39,6 +39,16 @@
   min-height: 100vh;
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000em;
+  top: auto;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+}
+
+
 .card-container {
   background-color: var(--very-pale-blue);
   border-radius: 1em;

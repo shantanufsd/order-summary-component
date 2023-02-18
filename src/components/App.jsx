@@ -11,6 +11,7 @@ function App() {
     
     return <div className = "wrapper">
     <main className="container">
+    <h1 className="sr-only">Order Summary</h1>
     <Card 
     image={ListeningToMusicImage}
     alt="Person Listening to Music"
