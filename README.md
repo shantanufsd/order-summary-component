@@ -48,5 +48,5 @@ I learned how to create a React app and utilize components as well as using prop
 
 ## Author
 
-- Frontend Mentor - [@shantanupratap](https://www.frontendmentor.io/profile/shantanupratap)
+- Frontend Mentor - [@shantanufsd](https://www.frontendmentor.io/profile/shantanufsd)
 - Twitter - [@shantanufsd](https://www.twitter.com/shantanufsd)
